@@ -1,31 +1,31 @@
 # Airquality_Exploratory_analysis
 
-Final exercise of Module 1 of the R course
+_Final exercise of Module 1 of the R course_
 
-## Project summary
+## Project Summary
 
-The exercise has been divided in 5 parts:
+This exercise is divided into five parts:
 
-1 - Understanding the dataset
-
-2 - Setting up the R Project and Github Repo
-
-3 - Data cleaning and transformation
-
-4 - Data visualization and Insights
-
-5 - Project documentation on README file
+1. Understanding the Dataset
+2. Setting up the R Project and GitHub Repo
+3. Data Cleaning and Transformation
+4. Data Visualization and Insights
+5. Project Documentation on README File
 
 ## The Dataset
 
-I worked with the dataset "airquality", which is already available in the base R package "datasets".
+I worked with the `airquality` dataset, which is available in the base R package `datasets`.
 
-The dataset contains 153 observations and 6 variables. After analyzing it, we notice the existence of NA values (those rows have been later deleted).
+- Observations: 153
+- Variables: 6
+- Note: NA values were found and subsequently removed.
 
 ## Findings
 
-A more detailed analysis can be found in the file <url of RMarkdown file>.
+For a detailed analysis, please refer to the RMarkdown file <>.
+
+---
 
 ## How to use it
 
-Feel free to fork this repository and do your own exploratory analysis as well.
+Feel free to fork this repository and conduct your own exploratory analysis!
