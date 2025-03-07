@@ -60,12 +60,21 @@ ggplot(airqual,aes(x=Ozone,y=Solar.R))+
 
 # Third graph
 ggplot(airqual, aes(x=Date)) +
-  geom_line( aes(y=Ozone), size=2, color="blue") + 
-  geom_line( aes(y=Solar.R), size=2, color="red") + 
+  geom_line( aes(y=Ozone), size=1.5, color="blue") +
+  labs(
+    title="Ozone levels in 1973",
+    x= "",
+    y="Ozone in parts per billion"
+  ) + 
+  theme_light()
+
+# Fourth graph
+ggplot(airqual, aes(x=Date)) +
+  geom_line( aes(y=Ozone), size=1, color="blue") + 
+  geom_line( aes(y=Solar.R/3), size=1, color="red") + 
   scale_y_continuous(
     # Features of the first axis
     name = "Ozone",
     # Add a second axis and specify its features
-    sec.axis = sec_axis(transform = ~.,name="Solar Radiation")
-  )+ 
-  theme_light()
+    sec.axis = sec_axis(transform = ~.,name="Solar Radiation dived by 3")
+  )
