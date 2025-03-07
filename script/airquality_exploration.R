@@ -34,3 +34,38 @@ head(airqual)
 
 # PART 4
 ## Lets try to draw relations between Ozone, Solar.R and Temp
+pairs(airqual, panel = panel.smooth, main = "Air quality data")
+
+# First graph
+ggplot(airqual, aes(x = Ozone))+
+  geom_histogram(aes(y=after_stat(density)),binwidth = 5, fill = "steelblue", color="white")+
+  geom_density(alpha=0.4, fill="red")+
+  labs(
+    title= "Distibution of Ozone",
+    x= "Ozone in parts per billion",
+    y= "Count"
+  ) + 
+  theme_light()
+
+# Second graph
+ggplot(airqual,aes(x=Ozone,y=Solar.R))+
+  geom_point(size = 2)+
+  geom_smooth(method="lm", col="red")+
+  labs(
+    title="Scatter plot: Ozone vs Solar Radiation",
+    x="Ozone in parts per billion",
+    y="Solar radiation in Langleys"
+  ) + 
+  theme_light()
+
+# Third graph
+ggplot(airqual, aes(x=Date)) +
+  geom_line( aes(y=Ozone), size=2, color="blue") + 
+  geom_line( aes(y=Solar.R), size=2, color="red") + 
+  scale_y_continuous(
+    # Features of the first axis
+    name = "Ozone",
+    # Add a second axis and specify its features
+    sec.axis = sec_axis(transform = ~.,name="Solar Radiation")
+  )+ 
+  theme_light()
